@@ -1,0 +1,28 @@
+[debug] [2022-10-18T00:30:25.158Z] ----------------------------------------------------------------------
+[debug] [2022-10-18T00:30:25.160Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-10-18T00:30:25.160Z] CLI Version:   11.11.0
+[debug] [2022-10-18T00:30:25.160Z] Platform:      win32
+[debug] [2022-10-18T00:30:25.160Z] Node Version:  v16.14.0
+[debug] [2022-10-18T00:30:25.161Z] Time:          Tue Oct 18 2022 03:30:25 GMT+0300 (Moscow Standard Time)
+[debug] [2022-10-18T00:30:25.161Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-18T00:30:25.384Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-18T00:30:25.385Z] > authorizing via signed-in user (darkhorse0723@gmail.com)
+[debug] [2022-10-18T00:30:25.385Z] [iam] checking project testing-sergej for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-18T00:30:25.387Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-sergej:testIamPermissions [none]
+[debug] [2022-10-18T00:30:25.387Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-sergej:testIamPermissions x-goog-quota-user=projects/testing-sergej
+[debug] [2022-10-18T00:30:25.387Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-sergej:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-18T00:30:26.723Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-sergej:testIamPermissions 200
+[debug] [2022-10-18T00:30:26.723Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-sergej:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-18T00:30:26.724Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testing-sergej [none]
+[debug] [2022-10-18T00:30:27.439Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testing-sergej 200
+[debug] [2022-10-18T00:30:27.439Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testing-sergej {"projectId":"testing-sergej","projectNumber":"639747115020","displayName":"Testing","name":"projects/testing-sergej","resources":{"hostingSite":"testing-sergej"},"state":"ACTIVE","etag":"1_e1d57336-bae4-448f-a5f4-7c0003e0dc17"}
+[info] 
+[info] === Deploying to 'testing-sergej'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-10-18T00:30:27.442Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testing-sergej [none]
+[debug] [2022-10-18T00:30:28.072Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testing-sergej 200
+[debug] [2022-10-18T00:30:28.072Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testing-sergej {"projectId":"testing-sergej","projectNumber":"639747115020","displayName":"Testing","name":"projects/testing-sergej","resources":{"hostingSite":"testing-sergej"},"state":"ACTIVE","etag":"1_e1d57336-bae4-448f-a5f4-7c0003e0dc17"}
+[debug] [2022-10-18T00:30:28.074Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/639747115020/sites/testing-sergej/versions [none]
+[debug] [2022-10-18T00:30:28.074Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/639747115020/sites/testing-sergej/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
